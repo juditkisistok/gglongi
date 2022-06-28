@@ -1,0 +1,5 @@
+"Treatment_drug","Treatment_num","Event","Days_from_baseline"
+"Drug1",1,"start",0
+"Drug1",2,"stop",224
+"Drug2",1,"start",307
+"Drug2",2,"stop",538
