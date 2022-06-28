@@ -1,3 +1,26 @@
+#' Title
+#'
+#' @param data
+#' @param x_val
+#' @param y_val
+#' @param col_val
+#' @param col_legend
+#' @param mean_line
+#' @param x_title
+#' @param y_title
+#' @param treatments
+#' @param scans
+#' @param progression
+#' @param treatment_start
+#' @param treatment_end
+#' @param treatment_drug
+#' @param scan_date
+#' @param event_date
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gglongi = function(data, x_val, y_val, col_val, col_legend = T,
                    mean_line = T, x_title = x_val, y_title = y_val,
                    treatments = NA, scans = NA, progression = NA,
