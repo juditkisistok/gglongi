@@ -33,7 +33,7 @@ devtools::install_github("juditkisistok/gglongi")
 
 This is a basic example which shows you how to create a longitudinal plot:
 
-```{r example}
+```{r example, fig.width = 7, fig.height=5, dev='svg'}
 library(gglongi)
 data("mafs")
 data("treatment")
@@ -41,6 +41,8 @@ data("scans")
 data("clinical_events")
 
 ## basic example code
+## colored rectangles represent the type and duration of treatment
+## dotted, red and black lines correspond to scan, progression and death dates, respectively
 gglongi(mafs, x_val = "time_from_baseline", y_val = "MAF", col_val = "Gene", 
         col_legend = T, mean_line = T, x_title = "Days from baseline sample", 
         y_title = "Mutant allele frequency", treatments = treatment, scans = scans, 
@@ -48,4 +50,5 @@ gglongi(mafs, x_val = "time_from_baseline", y_val = "MAF", col_val = "Gene",
         treatment_end = "stop_from_baseline", treatment_drug = "Treatment_drug", 
         scan_date = "Days_from_baseline", event_date = "Days_from_baseline") 
 ```
+
 

@@ -35,6 +35,8 @@ data("scans")
 data("clinical_events")
 
 ## basic example code
+## colored rectangles represent the type and duration of treatment
+## dotted, red and black lines correspond to scan, progression and death dates, respectively
 gglongi(mafs, x_val = "time_from_baseline", y_val = "MAF", col_val = "Gene", 
         col_legend = T, mean_line = T, x_title = "Days from baseline sample", 
         y_title = "Mutant allele frequency", treatments = treatment, scans = scans, 
@@ -43,4 +45,4 @@ gglongi(mafs, x_val = "time_from_baseline", y_val = "MAF", col_val = "Gene",
         scan_date = "Days_from_baseline", event_date = "Days_from_baseline") 
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+<img src="man/figures/README-example-1.svg" width="100%" />
