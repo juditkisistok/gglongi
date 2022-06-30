@@ -52,7 +52,7 @@ gglongi = function(data, x_val, y_val, col_val, col_legend = T,
     p = p +
       ggplot2::geom_rect(data = treatments, ggplot2::aes_string(xmin = treatment_start,
                                                        xmax = treatment_end,
-                                       ymin = 0, ymax = 1,
+                                       ymin = 0, ymax = max(dplyr::select(data, y_val)) * 1.2,
                                        fill = treatment_drug), alpha = 0.3)
   }
 
