@@ -7,15 +7,27 @@
 mean_val_per_timepoint(data, time_col, val_col)
 }
 \arguments{
-\item{data}{A data frame containing the time points and values.}
+\item{data}{The \code{data.frame} to be used for the calculation.
 
-\item{time_col}{Name of the column containing the time points.}
+It should contain a column with the values to be summarized, and the corresponding time points denoting when the measurement was taken.
 
-\item{val_col}{Name of the column containing the values to summarize.}
+Zero-value entries are ignored and are completely removed from the calculation, unless every value corresponding to the time point is zero.}
+
+\item{time_col}{\code{string} Name of the column containing the time data.}
+
+\item{val_col}{\code{string} Name of the column containing the values to summarize.}
 }
 \value{
-A data frame
+A \code{tibble} containing the mean value for each individual time point. The data frame contains two columns - the original \code{time_col} column and the calculated mean value column in the format \code{Mean_[val_col]}.
 }
 \description{
 Calculate the mean value per time point
+}
+\examples{
+x <- data.frame(
+         days_from_baseline = c(0, 0, 0, 27, 27),
+         MAF = c(0, 0.009, 0.007, 0.012, 0.032))
+
+mean_val_per_timepoint(x, 'days_from_baseline', 'MAF')
+
 }

@@ -1,4 +1,7 @@
 url: https://juditkisistok.github.io/gglongi/
 template:
   bootstrap: 5
+  bootswatch: lux
+  bslib:
+    pkgdown-nav-height: 100px
 
