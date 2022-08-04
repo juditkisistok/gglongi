@@ -67,3 +67,26 @@ A \code{ggplot} object.
 \description{
 Visualize longitudinal data
 }
+\examples{
+mafs <- data.frame(time_from_baseline = c(0, 0, 0, 27, 27),
+                   MAF = c(0, 0.009, 0.007, 0.012, 0.032),
+                   Gene = c('BRAF', 'BRAF', 'BRAF', 'TP53', 'TP53'))
+
+treatment = data.frame(Treatment_drug = c('Drug 1', 'Drug 2'),
+                       start_from_baseline = c(0, 307),
+                       stop_from_baseline = c(224, 538))
+
+scans = data.frame(Scan_num = c(1, 2, 3),
+                   Days_from_baseline = c(12, 247, 499))
+
+clinical_events = data.frame(Event = c('Progression', 'Death'),
+                             Days_from_baseline = c(273, 620))
+
+gglongi(mafs, x_val = "time_from_baseline", y_val = "MAF", col_val = "Gene",
+        col_legend = T, mean_line = T, x_title = "Days from baseline sample",
+        y_title = "Mutant allele frequency", treatments = treatment, scans = scans,
+        events = clinical_events, treatment_start = "start_from_baseline",
+        treatment_end = "stop_from_baseline", treatment_drug = "Treatment_drug",
+        scan_date = "Days_from_baseline", event_date = "Days_from_baseline")
+
+}
