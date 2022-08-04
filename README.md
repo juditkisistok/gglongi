@@ -4,6 +4,8 @@
 # gglongi
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/juditkisistok/gglongi/workflows/R-CMD-check/badge.svg)](https://github.com/juditkisistok/gglongi/actions)
 <!-- badges: end -->
 
 This package allows you to build longitudinal plots. It was born out of

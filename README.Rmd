@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # gglongi
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/juditkisistok/gglongi/workflows/R-CMD-check/badge.svg)](https://github.com/juditkisistok/gglongi/actions)
 <!-- badges: end -->
 
 This package allows you to build longitudinal plots. It was born out of the need to visualize genomic data over time and overlay clinical events such as treatment, scan dates, date of progression and date of death; however, as long as your data has a time component and some continuous value, you can use `gglongi` in your analysis workflow.
