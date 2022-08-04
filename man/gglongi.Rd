@@ -2,7 +2,7 @@
 % Please edit documentation in R/gglongi.R
 \name{gglongi}
 \alias{gglongi}
-\title{Title}
+\title{Visualize longitudinal data}
 \usage{
 gglongi(
   data,
@@ -15,7 +15,7 @@ gglongi(
   y_title = y_val,
   treatments = NA,
   scans = NA,
-  progression = NA,
+  events = NA,
   treatment_start,
   treatment_end,
   treatment_drug,
@@ -24,11 +24,46 @@ gglongi(
 )
 }
 \arguments{
-\item{event_date}{}
+\item{data}{The \code{data.frame} containing the data to be used for the visualization}
+
+\item{x_val}{A \code{string} referring to the name of the column to be visualized on the X axis.}
+
+\item{y_val}{A \code{string} referring to the name of the column to be visualized on the Y axis.}
+
+\item{col_val}{A \code{string} referring to the name of the column to be used to color the points on the plot.}
+
+\item{col_legend}{A \code{boolean} value. If \code{TRUE}, the color legend will be displayed.}
+
+\item{mean_line}{A \code{boolean} value. If \code{TRUE}, the mean values per time point will be calculated and added as a continuous line.}
+
+\item{x_title}{A \code{string} to be used as label for the X axis.}
+
+\item{y_title}{A \code{string} to be used as label for the X axis.}
+
+\item{treatments}{A \code{data.frame} containing treatment information. It should have 3 columns:
+\itemize{
+\item a column containing the name of the drug
+\item a column containing the time information for the start of treatment
+\item a column containing the time information for the end of treatment
+}}
+
+\item{scans}{A \code{data.frame} containing information about scan dates. It should contain a column denoting the time for each scan.}
+
+\item{events}{A \code{data.frame} containing information on clinical events. It should contain the type of event and the associated timing for the event.}
+
+\item{treatment_start}{A \code{string} referring to the name of the column containing the treatment start data.}
+
+\item{treatment_end}{A \code{string} referring to the name of the column containing the treatment end data.}
+
+\item{treatment_drug}{A \code{string} referring to the name of the column containing the treatment drug.}
+
+\item{scan_date}{A \code{string} referring to the name of the column containing the scan date in the \code{scans} data frame.}
+
+\item{event_date}{A \code{string} referring to the name of the column containing the event date in the \code{events} data frame.}
 }
 \value{
-
+A \code{ggplot} object.
 }
 \description{
-Title
+Visualize longitudinal data
 }
