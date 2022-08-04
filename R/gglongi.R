@@ -39,14 +39,14 @@
 #'                              Days_from_baseline = c(273, 620))
 #'
 #' gglongi(mafs, x_val = "time_from_baseline", y_val = "MAF", col_val = "Gene",
-#'         col_legend = T, mean_line = T, x_title = "Days from baseline sample",
+#'         col_legend = TRUE, mean_line = TRUE, x_title = "Days from baseline sample",
 #'         y_title = "Mutant allele frequency", treatments = treatment, scans = scans,
 #'         events = clinical_events, treatment_start = "start_from_baseline",
 #'         treatment_end = "stop_from_baseline", treatment_drug = "Treatment_drug",
 #'         scan_date = "Days_from_baseline", event_date = "Days_from_baseline")
 #'
-gglongi = function(data, x_val, y_val, col_val, col_legend = T,
-                   mean_line = T, x_title = x_val, y_title = y_val,
+gglongi = function(data, x_val, y_val, col_val, col_legend = TRUE,
+                   mean_line = TRUE, x_title = x_val, y_title = y_val,
                    treatments = NA, scans = NA, events = NA,
                    treatment_start, treatment_end, treatment_drug,
                    scan_date, event_date) {

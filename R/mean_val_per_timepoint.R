@@ -20,6 +20,7 @@
 #' mean_val_per_timepoint(x, 'days_from_baseline', 'MAF')
 #'
 mean_val_per_timepoint <- function(data, time_col, val_col) {
+  cleaned_val <- mean_val <- NULL
   mean_data <- data %>%
     dplyr::mutate(cleaned_val = ifelse(get(val_col) == 0, NA, get(val_col))) %>%
     dplyr::select(-val_col) %>%

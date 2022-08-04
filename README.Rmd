@@ -45,7 +45,7 @@ data("clinical_events")
 ## dotted, red and black lines correspond to scan, progression and death dates, respectively
 
 gglongi(mafs, x_val = "time_from_baseline", y_val = "MAF", col_val = "Gene", 
-        col_legend = T, mean_line = T, x_title = "Days from baseline sample", 
+        col_legend = TRUE, mean_line = TRUE, x_title = "Days from baseline sample", 
         y_title = "Mutant allele frequency", treatments = treatment, scans = scans, 
         events = clinical_events, treatment_start = "start_from_baseline", 
         treatment_end = "stop_from_baseline", treatment_drug = "Treatment_drug", 
